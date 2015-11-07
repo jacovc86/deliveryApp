@@ -1,0 +1,31 @@
+<ion-view class="newpackage" view-title="יצירת משלוח">
+  <ion-content>
+	<div class="list">
+
+	  <label class="item item-input">
+	    <button class="button button-block button-dark" ng-click="showSizeSelector()">
+	      <h2 style="color:#fff">גודל חבילה:</h2>
+	    </button>
+	  </label>
+	</div>
+	<script id="sizeselector.html" type="text/ng-template">
+		<ion-modal-view>
+		  <ion-header-bar>
+		    <h1 class="title">בחר גודל חבילה</h1>
+		    <div class="buttons">
+		      <button class="button button-clear" ng-click="closeSizeSelector()">סגור</button>
+		    </div>
+		  </ion-header-bar>
+		  <ion-content>
+		      <div class="list">
+		        <label class="item item-input" ng-repeat="size in options">
+		          <button class="button button-block">
+		          	{{size.name}}
+		          </button>
+		        </label>
+		      </div>
+		  </ion-content>
+		</ion-modal-view>
+	</script>
+  </ion-content>
+</ion-view>

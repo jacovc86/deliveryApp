@@ -1,0 +1,12 @@
+{
+  "name": "deliveryApp",
+  "app_id": "aa8ea05d",
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ]
+}

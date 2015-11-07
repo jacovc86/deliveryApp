@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">כניסה/הרשמה</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">סגור</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="localLogin(creds)">
+      <div class="list">
+        <label class="item item-input">
+          <input placeholder="דואר אלקטרוני" type="email" ng-model="creds.email">
+        </label>
+        <label class="item item-input">
+          <input placeholder="סיסמא" type="password" ng-model="creds.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-balanced" type="submit"><b>כניסה</b></button>
+        </label>
+      </div>
+    </form>
+    <io-button
+    class="button button-block button-positive icon icon-left ion-social-facebook"
+    ng-click="facebookLogin()">התחבר באמצעות <b>פייסבוק</b></io-button>
+    <io-button
+    class="button button-block button-assertive icon icon-left ion-social-googleplus"
+    ng-click="googleLogin()">+הכנס עם <b>גוגל</b></io-button>
+  </ion-content>
+</ion-modal-view>
